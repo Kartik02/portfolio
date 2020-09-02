@@ -28,11 +28,13 @@ html{
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     color: #eee;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body{
-    /* max-width: 100%;
-    overflow-x: hidden; */
+    max-width: 100%;
+    overflow-x: hidden;
     background: url("images/sitebg.jpg") no-repeat center fixed;
     background-size: cover;
     color: #eee;
@@ -48,7 +50,7 @@ a{
 }
 
 p{
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 300;
 }
 
@@ -648,6 +650,11 @@ input[type="submit"]:hover{
 
     .timeline .date::before{
         font-size: 1.4rem;
+        display: contents;
+    }
+
+    .timeline ul{
+        margin: 0 auto;
     }
 
     form{
