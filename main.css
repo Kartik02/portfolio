@@ -231,10 +231,10 @@ font-weight: 300;
     color: #4267b2
 }
 .fa-github-square:hover{
-    color: #db942a
+    color: #AD5C51
 }
-.fa-twitter-square:hover{
-    color: #38a1f3
+.fa-linkedin:hover{
+    color: #0e76a8
 }
 /* End about */
 
@@ -475,7 +475,7 @@ textarea{
     outline-color: #fd57bf;
 }
 
-input[type="submit"]{
+input[type="button"]{
     width:initial;
     background-color: #fd57bf;
     color: #eee;
@@ -485,9 +485,9 @@ input[type="submit"]{
     transition: background-color 650ms;
 }
 
-input[type="submit"]:hover{
+input[type="button"]:hover{
     color: #221e3f;
-    background-color: #ffe838;
+    background-color: #f0bd26;
 }
 /* End contact */
 
