@@ -232,12 +232,12 @@
         function submitForm(){
             var name= document.getElementById('name').value;
             var email= document.getElementById('email').value;
-            var subject= "from "+name+": "+document.getElementById('subject').value;
+            var subject= "from "+email+": "+document.getElementById('subject').value;
             var message= document.getElementById('message').value;
             Email.send({
                 SecureToken : "8d9300c4-7bc3-4ec6-a060-5f6cc85b6607",
                 To : "karanpoojari101@gmail.com",
-                From : email,
+                From :"karanpoojari101@gmail.com",
                 Subject : subject,
                 Body : message
              }).then(
