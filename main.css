@@ -190,6 +190,8 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    
 }
 
 .about-heading{
@@ -212,6 +214,7 @@ font-weight: 300;
 .profile-img{
     flex: 1;
     margin-right: 5rem;
+    
 }
 
 .about-details{
