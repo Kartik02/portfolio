@@ -317,19 +317,30 @@
         var subject =
           "from " + email + ": " + document.getElementById("subject").value;
         var message = document.getElementById("message").value;
-        Email.send({
-          SecureToken: "86027e01-e61a-4694-a7ff-7149ace43a69",
-          To: "kartikpoojari29@gmail.com",
-          From: "kartikpoojari29@gmail.com",
-          Subject: subject,
-          Body: message,
-        }).then((message) => {
-          if (message === "OK") {
-            alert("Thank you for reaching, will contact you soon!");
-          } else {
-            alert(message);
-          }
-        });
+        var serviceID = "service_8hvct1m"; // Service ID
+        var templateID = "__ejs-test-mail-service__"; // Template ID
+        var userID = "email_nxUmdekdDsJNJFMq4lNfFWT3"; // User ID
+        
+        var templateParams = {
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+        };
+
+        // Call the EmailJS send function with the provided service ID, template ID, and user ID
+        emailjs.send(serviceID, templateID, templateParams, userID)
+          .then(function(response) {
+            if (response.status === 200) {
+              alert("Thank you for reaching out! We will contact you soon.");
+            } else {
+              alert("Error: " + response.text); // Show any error message
+            }
+          })
+          .catch(function(error) {
+            console.error("Error sending email:", error);
+            alert("Failed to send message. Please try again later.");
+          });
       }
     </script>
   </body>
